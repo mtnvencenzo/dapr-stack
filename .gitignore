@@ -5,4 +5,8 @@
 .env
 .DS_Store
 
+# Ignore everything in volumes directory except .gitkeep files
 volumes/*
+!volumes/*/
+volumes/*/*
+!volumes/*/.gitkeep
