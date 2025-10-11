@@ -1,0 +1,8 @@
+# Docker-related ignores
+*.swp
+*.bak
+*.tmp
+.env
+.DS_Store
+
+volumes/*
