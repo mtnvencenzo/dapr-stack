@@ -35,7 +35,12 @@ docker compose down
 ```
 
 ## Ports
-- `50005` - Placement service
-- `50006` - Scheduler service  
+- `50005` - Placement service (gRPC)
+- `58080` - Placement healthz endpoint
+- `59090` - Placement metrics endpoint
+- `50006` - Scheduler service (gRPC)
+- `52379` - Scheduler etcd client endpoint
+- `58081` - Scheduler healthz endpoint
+- `59091` - Scheduler metrics endpoint
 - `9411` - Zipkin UI (http://localhost:9411)
 - `6379` - Redis
