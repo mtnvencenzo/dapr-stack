@@ -1,0 +1,27 @@
+version: 2
+updates:
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    assignees:
+      - "mtnvencenzo"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+
+  # Docker images (for any Dockerfile dependencies)
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    assignees:
+      - "mtnvencenzo"
+    commit-message:
+      prefix: "chore"
+      include: "scope"

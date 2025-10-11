@@ -1,0 +1,58 @@
+name: dapr
+
+services:
+  placement:
+    container_name: dapr_placement
+    image: daprio/dapr:latest
+    command: ["./placement", "-port", "50005"]
+    ports:
+      - "50005:50005"
+      - "58080:8080"
+      - "59090:9090"
+    restart: unless-stopped
+    networks:
+      - dapr-network
+
+  scheduler:
+    container_name: dapr_scheduler
+    image: daprio/dapr:latest
+    command: ["./scheduler", "--port", "50006", "--etcd-data-dir", "/data"]
+    ports:
+      - "50006:50006"
+      - "52379:2379"
+      - "58081:8080"
+      - "59091:9090"
+    restart: unless-stopped
+    networks:
+      - dapr-network
+    volumes:
+      - ./volumes/scheduler-data:/data
+    user: "0:0"
+
+  zipkin:
+    container_name: dapr_zipkin
+    image: openzipkin/zipkin:latest
+    ports:
+      - "9411:9411"
+    restart: unless-stopped
+    volumes:
+      - ./volumes/zipkin-data:/zipkin/data
+    networks:
+      - dapr-network
+
+  redis:
+    container_name: dapr_redis
+    image: redis:alpine
+    
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+    # command: ["redis-server", "--appendonly", "yes"] # For persistence if needed
+    networks:
+      - dapr-network
+    volumes:
+      - ./volumes/redis-data:/data
+
+networks:
+  dapr-network:
+    driver: bridge
