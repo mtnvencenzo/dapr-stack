@@ -28,15 +28,7 @@ All containers run within a dedicated `dapr-network` bridge network for secure i
 
 > The setup in this repo is geared for local development usage and should not be considered for production without adjustments.
 
-### 1. Create local directories for persistent data:
-	```bash
-	mkdir -p "${HOME}/mnt/dapr-stack/redis-data"
-	mkdir -p "${HOME}/mnt/dapr-stack/scheduler-data"
-	mkdir -p "${HOME}/mnt/dapr-stack/zipkin-data"
-	```
-
-
-### 2. Start the Dapr runtime services:
+### 1. Start the Dapr runtime services:
 
 	```bash
     docker compose -p dapr-stack -f docker-compose.yml up -d
@@ -60,7 +52,7 @@ All containers run within a dedicated `dapr-network` bridge network for secure i
 	docker compose -p dapr-stack -f docker-compose.yml up -d --force-recreate --no-deps --build <service_name>
 	```
 
-### 3. Verify Services are Running:
+### 2. Verify Services are Running:
 	```bash
 	# Check all services status
 	docker compose ps
@@ -74,14 +66,14 @@ All containers run within a dedicated `dapr-network` bridge network for secure i
 	docker exec dapr_redis redis-cli ping
 	```
 
-### 4. Use with Your Dapr Applications:
+### 3. Use with Your Dapr Applications:
 	- Your Dapr applications will automatically connect to these services when running with `dapr run`
 	- The placement service handles actor placement at `localhost:50005`
 	- The scheduler service provides reliable scheduling at `localhost:50006`
 	- Zipkin collects distributed traces at `localhost:9411`
 	- Redis provides state store and pub/sub at `localhost:6379`
 
-### 5. Monitor with Zipkin:
+### 4. Monitor with Zipkin:
 	- Access the Zipkin UI at http://localhost:9411 to view distributed traces from your Dapr applications.
 
 ## 🛠️ Customization
