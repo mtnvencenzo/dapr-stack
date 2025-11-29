@@ -4,9 +4,3 @@
 *.tmp
 .env
 .DS_Store
-
-# Ignore everything in mnt directory except .gitkeep files
-mnt/*
-!mnt/*/
-mnt/*/*
-!mnt/*/.gitkeep

@@ -31,10 +31,10 @@ All containers run within a dedicated `dapr-network` bridge network for secure i
 ### 1. Start the Dapr runtime services:
 
 	```bash
-    docker compose -p dapr-stack -f docker-compose.yml up -d
+    docker compose -f docker-compose.yml up -d
 
     # Or if the containers have already been created
-    docker compose -p dapr-stack -f docker-compose.yml start
+    docker compose -f docker-compose.yml start
 
 	```
 
@@ -43,13 +43,13 @@ All containers run within a dedicated `dapr-network` bridge network for secure i
 	To bring the compose down, use this command:
 
 	```bash
-	docker compose -p dapr-stack -f docker-compose.yml down -v
+	docker compose -f docker-compose.yml down -v
 	```
 
 	To force a rebuild and deploy of an individual container use this command:  
 
 	```bash
-	docker compose -p dapr-stack -f docker-compose.yml up -d --force-recreate --no-deps --build <service_name>
+	docker compose -f docker-compose.yml up -d --force-recreate --no-deps --build <service_name>
 	```
 
 ### 2. Verify Services are Running:

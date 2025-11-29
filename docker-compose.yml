@@ -1,5 +1,4 @@
-name: dapr
-
+name: dapr-stack
 services:
   placement:
     container_name: dapr_placement
