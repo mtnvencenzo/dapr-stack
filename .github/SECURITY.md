@@ -31,18 +31,7 @@ To help us better understand the nature and scope of the possible issue, please 
 - 💥 **Proof-of-concept or exploit code** (if possible)
 - 🎯 **Impact of the issue**, including how an attacker might exploit the issue
 
-## 📞 Response Timeline
 
-- **Initial Response**: Within 48 hours of receiving your report
-- **Status Update**: Within 7 days with a more detailed response
-- **Resolution**: We aim to resolve critical issues within 30 days
-
-## 🏆 Recognition
-
-We believe in acknowledging security researchers who help improve our security:
-
-- 📝 **Security Advisory**: We will credit you in the security advisory (unless you prefer to remain anonymous)
-- 🎖️ **Hall of Fame**: Recognition in our security contributors list
 
 ## 🔐 Security Best Practices
 
@@ -54,13 +43,6 @@ We believe in acknowledging security researchers who help improve our security:
 - 📱 **Access Control**: Use principle of least privilege for container access
 - 🏷️ **Image Pinning**: Pin image versions to avoid unexpected changes
 
-### For Configuration Developers
-
-- 🛡️ **Input Validation**: All configuration values are validated and constrained
-- 🔒 **Secure Defaults**: Configurations use secure default settings
-- 📊 **Sensitive Variables**: Use environment variables for sensitive values
-- 🔄 **Image Versions**: Specify minimum secure image versions
-- 📚 **Documentation**: Document security considerations for each service
 
 ## 📚 Additional Resources
 

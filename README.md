@@ -3,11 +3,6 @@ This repo contains a Docker Compose setup for running Dapr in self-hosted mode, 
 
 ![Dapr Architecture Diagram](./assets/dapr-stack.drawio.svg)
 
-## 📁 Contents
-
-- **docker-compose.yml**: Docker Compose file to orchestrate all Dapr runtime services.
-- **volumes/**: Persistent data directories for Redis, Scheduler, and Zipkin.
-- **README.md**: This documentation file.
 
 ## ⚙️ Prerequisites
 
@@ -19,8 +14,6 @@ This setup provides the complete Dapr self-hosted runtime environment:
 
 - **dapr_placement** - Dapr placement service for actor placement (port 50005)
 - **dapr_scheduler** - Dapr scheduler service for reliable scheduling (port 50006)  
-- **dapr_zipkin** - Zipkin for distributed tracing (port 9411)
-- **dapr_redis** - Redis for state store and pub/sub messaging (port 6379)
 
 All containers run within a dedicated `dapr-network` bridge network for secure inter-service communication.
 
@@ -60,21 +53,12 @@ All containers run within a dedicated `dapr-network` bridge network for secure i
 	# Check health endpoints
 	curl http://localhost:58080/healthz  # Placement service
 	curl http://localhost:58081/healthz  # Scheduler service
-	curl http://localhost:9411/health    # Zipkin service
-	
-	# Test Redis connection
-	docker exec dapr_redis redis-cli ping
 	```
 
 ### 3. Use with Your Dapr Applications:
 	- Your Dapr applications will automatically connect to these services when running with `dapr run`
 	- The placement service handles actor placement at `localhost:50005`
 	- The scheduler service provides reliable scheduling at `localhost:50006`
-	- Zipkin collects distributed traces at `localhost:9411`
-	- Redis provides state store and pub/sub at `localhost:6379`
-
-### 4. Monitor with Zipkin:
-	- Access the Zipkin UI at http://localhost:9411 to view distributed traces from your Dapr applications.
 
 ## 🛠️ Customization
 
@@ -92,11 +76,6 @@ All containers run within a dedicated `dapr-network` bridge network for secure i
   - Metrics: `localhost:59091/metrics`
   - etcd Client: `localhost:52379`
 
-### Supporting Services  
-- **Zipkin UI**: `localhost:9411` (HTTP)
-  - Health Check: `localhost:9411/health`
-- **Redis**: `localhost:6379` (TCP)
-
 ## 🐞 Troubleshooting
 
 - Check container logs for errors:
@@ -106,8 +85,6 @@ All containers run within a dedicated `dapr-network` bridge network for secure i
   # Or for a specific service
   docker compose logs dapr_placement
   docker compose logs dapr_scheduler
-  docker compose logs dapr_zipkin
-  docker compose logs dapr_redis
   ```
 - Ensure no port conflicts with existing services on your machine.
 - Validate that Docker has sufficient resources allocated for all containers.

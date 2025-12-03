@@ -10,10 +10,8 @@ What type of change was this related to?
 
 - [ ] New service configuration (adds new service to Docker Compose setup)
 - [ ] Configuration enhancement (non-breaking change which adds functionality to existing setup)
-- [ ] Bug fix (non-breaking change which fixes a configuration issue)
-- [ ] Breaking change (fix or feature that would cause existing setup to not work as expected)
+- [ ] Bug fix
 - [ ] Documentation update
-- [ ] CI/CD and workflow change
 - [ ] Chore / Misc
 
 <br/>
@@ -25,22 +23,6 @@ What type of change was this related to?
 - [ ] Docker Compose validation passed (`docker compose config`)
 - [ ] Services start successfully (`docker compose up -d`)
 - [ ] Health checks pass
-- [ ] Dapr services configuration validated
-- [ ] End-to-end Dapr functionality tested
-- [ ] Service connectivity verified
-
-<br/>
-
-## ✅ Configuration Checklist:
-
-- [ ] My configuration follows the Docker and Dapr best practices
-- [ ] I have performed a self-review of my configuration code
-- [ ] I have commented my configuration, particularly in complex areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings or security issues
-- [ ] I have tested the complete service startup and health checks
-- [ ] Configuration follows the established naming conventions
-- [ ] I have updated the README with any new setup instructions
 
 <br/>
 

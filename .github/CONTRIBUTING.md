@@ -26,9 +26,7 @@ Before you begin, ensure you have the following installed:
 ```
 ├── docker-compose.yml          # Main Docker Compose configuration
 ├── volumes/                    # Persistent data directories
-│   ├── redis-data/            # Redis data persistence
 │   ├── scheduler-data/        # Dapr scheduler data
-│   └── zipkin-data/           # Zipkin trace data
 ├── .github/                   # GitHub workflows and templates
 └── README.md                  # Project overview and setup guide
 ```
@@ -67,8 +65,6 @@ Before you begin, ensure you have the following installed:
    # Check Dapr scheduler service
    curl -f http://localhost:58081/healthz
    
-   # Check Zipkin UI
-   curl -f http://localhost:9411/health
    ```
 
 ## 🔄 Contributing Process
@@ -101,11 +97,7 @@ Before you begin, ensure you have the following installed:
    # Check services are healthy
    curl -f http://localhost:58080/healthz  # Placement
    curl -f http://localhost:58081/healthz  # Scheduler
-   curl -f http://localhost:9411/health    # Zipkin
-   
-   # Check Redis connection
-   docker exec dapr_redis redis-cli ping
-   
+
    # Clean up test
    docker compose down -v
    ```

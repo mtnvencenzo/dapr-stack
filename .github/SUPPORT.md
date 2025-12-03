@@ -32,19 +32,6 @@ If you have questions about using this Dapr setup:
    - Browse existing discussions
    - Best for: General questions, configuration discussions, Dapr patterns
 
-2. **GitHub Issues** 🐛
-   - [Create an issue](../../issues/new/choose)
-   - Use our issue templates
-   - Best for: Bug reports and configuration feature requests
-
-### 📞 Response Times
-
-We aim to respond to:
-- 🚨 **Security issues**: Within 48 hours
-- 🐛 **Bug reports**: Within 1-2 business days
-- ✨ **Configuration feature requests**: Within 1 week
-- 💬 **General questions**: Within 1 week
-
 ## 🐛 Bug Reports
 
 Found a bug in the configuration? Help us fix it!
@@ -68,38 +55,9 @@ Found a bug in the configuration? Help us fix it!
    - Configuration files (sanitized)
    - Error messages and logs
 
-### 🔄 What Happens Next
-
-1. 🏷️ **Triage**: We'll label and prioritize your issue
-2. 🔍 **Investigation**: We'll investigate and may ask for more details
-3. 🛠️ **Fix**: We'll work on a fix if confirmed as a bug
-4. ✅ **Resolution**: We'll notify you when it's fixed
-
 ### 🧠 Feature Requests
 
 Want to see new Dapr features or service integrations?
-
-### 📝 Before Requesting
-
-1. **Check existing issues** for similar requests
-2. **Consider the scope** - does it fit the project goals?
-3. **Think about implementation** - provide detailed requirements
-
-### 📮 How to Request
-
-1. Use our **[Feature Request Template](../../issues/new/choose)**
-2. Provide detailed information:
-   - Feature description and use case
-   - Expected behavior and benefits
-   - Alternative solutions considered
-   - Implementation suggestions (if any)
-
-### 📊 Evaluation Process
-
-1. 📋 **Review**: We'll review your request
-2. 💬 **Discussion**: We may ask questions or start a discussion
-3. 🎯 **Prioritization**: We'll prioritize based on impact and effort
-4. 🚀 **Implementation**: Approved requests will be added to our roadmap
 
 ## 🤝 Contributing
 
@@ -111,33 +69,6 @@ Want to contribute configuration improvements, documentation, or other enhanceme
 2. 🍴 **Fork the repository**
 3. 💻 **Make your changes**
 4. 📬 **Submit a pull request**
-
-### 🧾 Types of Contributions
-
-- 🐛 **Bug fixes** in existing configurations
-- ✨ **New service configurations** for additional Dapr components
-- 📚 **Documentation improvements**
-- 🧪 **Configuration examples and tests**
-- 🔧 **Performance improvements and optimizations**
-- 🔒 **Security enhancements and best practices**
-
-### ✅ Approval Process
-
-⚠️ **Important**: Contributors must be approved by maintainers before making changes to this repository.
-
-## 🌐 Community
-
-Join our community of microservices engineers and distributed application enthusiasts!
-
-### 📣 Stay Updated
-
-- ⭐ **Star the repository** to show support
-- 👀 **Watch releases** for new configurations and updates
-- 🐦 **Follow updates** on Dapr enhancements
-
-### 🤗 Code of Conduct
-
-We're committed to providing a welcoming and inclusive experience for everyone. Please be respectful and constructive in all interactions.
 
 ## 💼 Commercial Support
 
@@ -154,7 +85,6 @@ Need professional Dapr setup or consulting?
 - 🏗️ **Microservices Architecture Consulting**
 - 🎓 **Dapr Training and Workshops**
 - 🚀 **Application Migration to Dapr**
-- 🔧 **Ongoing Configuration Maintenance**
 
 ## 📊 Project Status
 
