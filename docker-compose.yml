@@ -19,9 +19,9 @@ services:
     hostname: scheduler.docker.local
     container_name: scheduler
     image: daprio/dapr:latest
-    command: ["./scheduler", "--port", "50006", "--etcd-data-dir", "/data"]
+    command: ["./scheduler", "--port", "50007", "--etcd-data-dir", "/data"]
     ports:
-      - "50006:50006"
+      - "50007:50007"
       - "52379:2379"
       - "58081:8081"
       - "59091:9091"
