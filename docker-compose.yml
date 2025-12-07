@@ -1,35 +1,25 @@
 name: dapr-stack
 services:
-  placement:
-    hostname: placement.docker.local
-    container_name: placement
+  dapr_placement:
+    container_name: dapr_placement
     image: daprio/dapr:latest
     command: ["./placement", "-port", "50005"]
     ports:
       - "50005:50005"
-      - "58080:8080"
-      - "59090:9090"
     restart: unless-stopped
     networks:
-      dapr-network:
-        aliases:
-          - placement.docker.local
+      - dapr-network
 
-  scheduler:
-    hostname: scheduler.docker.local
-    container_name: scheduler
+  dapr_scheduler:
+    container_name: dapr_scheduler
     image: daprio/dapr:latest
-    command: ["./scheduler", "--port", "50007", "--etcd-data-dir", "/data"]
+    command: ["./scheduler", "--port", "50006", "--etcd-data-dir", "/data"]
     ports:
-      - "50007:50007"
+      - "50006:50006"
       - "52379:2379"
-      - "58081:8081"
-      - "59091:9091"
     restart: unless-stopped
     networks:
-      dapr-network:
-        aliases:
-          - scheduler.docker.local
+      - dapr-network
     volumes:
       - vol_scheduler:/data
     user: "0:0"
