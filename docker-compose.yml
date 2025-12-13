@@ -8,7 +8,7 @@ services:
       - "50005:50005"
     restart: unless-stopped
     networks:
-      - dapr-network
+      - app-host-network
 
   dapr_scheduler:
     container_name: dapr_scheduler
@@ -19,14 +19,15 @@ services:
       - "52379:2379"
     restart: unless-stopped
     networks:
-      - dapr-network
+      - app-host-network
     volumes:
       - vol_scheduler:/data
     user: "0:0"
 
 networks:
-  dapr-network:
-    driver: bridge
+  app-host-network:
+    external: true
+    name: app-host-network
 
 volumes:
   vol_scheduler:
